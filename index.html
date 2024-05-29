@@ -96,7 +96,7 @@
                                              <p>I sell my baskets in Wobage Makers Gallery with seven other talented craftspeople</p>
                                              <p class="padding-bottom-25">I enjoy our peaceful spot in the countryside, as well as the company and support of other makers</p>
                                              <p>Wobage Makers Gallery is open every Thursday, Friday and Saturday from 10am to 5pm (March - Christmas)</p>
-                                             <p>We also host events, including my weaving demonstrations - please visit the Wobage website to find out what's coming up next</p>
+                                             <p class="padding-bottom-15">We also host events, including my weaving demonstrations - please visit the Wobage website to find out what's coming up next</p>
                                              <button class="text-btn" onclick="window.location.href='https://www.wobage.co.uk/'">go to the Wobage website</button>
                                              <p class="padding-bottom-25">  </p>`;
             }
@@ -143,9 +143,21 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            document.getElementById('emailBtn').addEventListener('click', function () {
-                window.location.href = 'mailto:clyde@wildwicker.com?subject=Subject%20Here';
-            });
+            var emailBtn = document.getElementById('emailBtn');
+
+            // Function to handle click event
+            function handleEmailBtnClick() {
+                // Check if the device is mobile
+                if (/Mobi|Android/i.test(navigator.userAgent)) {
+                    window.location.href = 'mailto:clyde@wildwicker.com?subject=Subject%20Here';
+                } else {
+                    // For non-mobile devices, open default email client
+                    window.open('mailto:clyde@wildwicker.com?subject=Subject%20Here', '_self');
+                }
+            }
+
+            // Add click event listener to the button
+            emailBtn.addEventListener('click', handleEmailBtnClick);
         });
     </script>
 
