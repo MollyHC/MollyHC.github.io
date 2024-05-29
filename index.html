@@ -62,15 +62,35 @@
                                              <p class="padding-bottom-25">Day courses start at £95 per person</p>
 
                                              <!--      email button        -->
-                                             <a href="mailto:clyde@wildwicker.com?subject=Subject%20Here" id="emailLink">
+                                             
                                                     <button id="emailBtn" class="text-btn">please email me to book</button>
-                                             </a>
+                                            
 
                                              <p class="padding-bottom-25">  </p>
 
                                              <!--      add courses image        -->
                                              <img src="./images/courses/basket_course.jpeg" alt="Basket Making Course Students" class="large-image">
                                              <p class="padding-bottom-25">  </p>`;
+
+                                             var emailBtn = document.getElementById('emailBtn');
+
+                                             // Function to handle click event
+                                             function handleEmailBtnClick(event) {
+                                                        var mailtoLink = 'mailto:me@me.com?subject=Subject%20Here';
+
+                                                        if (/Mobi|Android/i.test(navigator.userAgent)) {
+                                                            // Redirect to mailto link for mobile devices
+                                                            window.location.href = mailtoLink;
+                                                        } else {
+                                                            // Open default email client for non-mobile devices
+                                                            window.open(mailtoLink, '_self');
+                                                        }
+
+                                                        event.preventDefault();
+                                                        }
+
+                                                        // Add click event listener to the button
+                                                        emailBtn.addEventListener('click', handleEmailBtnClick);
             }
             else if (content === 'Ethos') {
                 textContent.innerHTML = `<h1>Journey</h1>
@@ -141,29 +161,11 @@
             document.body.appendChild(textBox);
         }
 
-    </script>
-
-    <script>
+        // Example usage of openTextBox function
         document.addEventListener('DOMContentLoaded', function () {
-            var emailLink = document.getElementById('emailLink');
-            var emailBtn = document.getElementById('emailBtn');
+            // Call openTextBox with 'Courses' to test
+            openTextBox('Courses');
 
-            // Function to handle click event
-            function handleEmailBtnClick(event) {
-                // Check if the device is mobile
-                if (/Mobi|Android/i.test(navigator.userAgent)) {
-                    // Redirect to mailto link for mobile devices
-                    return true;
-                } else {
-                    // Open default email client for non-mobile devices
-                    window.open('mailto:clyde@wildwicker.com?subject=Subject%20Here', '_self');
-                    event.preventDefault();
-                }
-            }
-
-            // Add click event listener to the button
-            emailBtn.addEventListener('click', handleEmailBtnClick);
-        });
     </script>
 
 </body>
