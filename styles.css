@@ -144,7 +144,7 @@ body {
         .text-content img.large-image {
             display: block;
             margin: 20px auto; /* Center the image horizontally and add margin */
-            width: 80%; /* Adjust width as needed */
+            width: 60%; /* Adjust width as needed */
             max-width: 200px; /* max width to ensure it doesn't get too large */
             height: auto;
         }
