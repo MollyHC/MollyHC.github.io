@@ -71,27 +71,10 @@
                                              <!--      add courses image        -->
                                              <img src="./images/courses/basket_course.jpeg" alt="Basket Making Course Students" class="large-image">
                                              <p class="padding-bottom-25">  </p>`;
-
-                                             var emailBtn = document.getElementById('emailBtn');
-
-                                             // Function to handle click event
-                                             function handleEmailBtnClick(event) {
-                                                        var mailtoLink = 'mailto:me@me.com?subject=Subject%20Here';
-
-                                                        if (/Mobi|Android/i.test(navigator.userAgent)) {
-                                                            // Redirect to mailto link for mobile devices
-                                                            window.location.href = mailtoLink;
-                                                        } else {
-                                                            // Open default email client for non-mobile devices
-                                                            window.open(mailtoLink, '_self');
-                                                        }
-
-                                                        event.preventDefault();
-                                                        }
-
-                                                        // Add click event listener to the button
-                                                        emailBtn.addEventListener('click', handleEmailBtnClick);
             }
+
+
+
             else if (content === 'Ethos') {
                 textContent.innerHTML = `<h1>Journey</h1>
                                              <p>In Spring 2011, I waded head long into my first weave, with willow from a very helpful basket maker in Chepstow</p>
@@ -159,12 +142,33 @@
             textBox.appendChild(closeBtn);
             textBox.appendChild(textContent);
             document.body.appendChild(textBox);
-        }
 
-        // Example usage of openTextBox function
-        document.addEventListener('DOMContentLoaded', function () {
-            // Call openTextBox with 'Courses' to test
-            openTextBox('Courses');
+            // Set up event listener for the email button after it has been added to the DOM
+            if (content === 'Courses') {
+                var emailBtn = document.getElementById('emailBtn');
+
+                // Function to handle click event
+                function handleEmailBtnClick(event) {
+                    var mailtoLink = 'mailto:clyde@wildwicker.com?subject=Subject%20Here';
+
+                    if (/Mobi|Android/i.test(navigator.userAgent)) {
+                        // Redirect to mailto link for mobile devices
+                        window.location.href = mailtoLink;
+                    } else {
+                        // Open default email client for non-mobile devices
+                        window.open(mailtoLink, '_self');
+                    }
+
+                    event.preventDefault();
+                }
+
+                // Add click event listener to the button
+                emailBtn.addEventListener('click', handleEmailBtnClick);
+            }
+        }
+        
+
+        
 
     </script>
 
