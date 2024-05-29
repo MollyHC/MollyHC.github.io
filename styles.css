@@ -141,6 +141,14 @@ body {
             height: auto;
         }
 
+        .text-content img.large-image {
+            display: block;
+            margin: 20px auto; /* Center the image horizontally and add margin */
+            width: 80%; /* Adjust width as needed */
+            max-width: 200px; /* max width to ensure it doesn't get too large */
+            height: auto;
+        }
+
         .text-content {
             width: 100%;
             text-align: center;
