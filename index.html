@@ -44,23 +44,29 @@
             const textContent = document.createElement('div');
             textContent.classList.add('text-content');
 
-             if (content === 'Courses') {
-                 textContent.innerHTML = `<h1>${content}</h1>
-                                 <p>I teach basketmaking in my workshop in a beautiful old barn at Wobage</p>
-                                 <p>The introductory day course covers several techniques and will give you an understanding of basket making from its history to its place in the modern world</p>
-                                 <p class="padding-bottom-25">Courses include many different functional designs and various applications of willow weaving, using willow I have grown at the bottom of Wobage's ancient Perry Orchard</p>
-                               
-                                 <p>Introduction - you will make your very own large round willow basket</p>
-                                 <p>Improvers - you will go on to make a large oval washing basket</p>
-                                 <p class="padding-bottom-25">Garden Structures - you can make plant supports and willow panels</p>
+            if (content === 'Courses') {
+                textContent.innerHTML = `<h1>${content}</h1>
+                                     <p>I teach basketmaking in my workshop in a beautiful old barn at Wobage</p>
+                                     <p>The introductory day course covers several techniques and will give you an understanding of basket making from its history to its place in the modern world</p>
+                                     <p class="padding-bottom-25">Courses include many different functional designs and various applications of willow weaving, using willow I have grown at the bottom of Wobage's ancient Perry Orchard</p>
 
-                                 <p>I am happy to teach one to one or in groups</p>
-                                 <p>Please get in touch for more information</p>
-                                 <p class="padding-bottom-25">Day courses start at £95 per person</p>
+                                     <p>Introduction - you will make your very own large round willow basket</p>
+                                     <p>Improvers - you will go on to make a large oval washing basket</p>
+                                     <p class="padding-bottom-25">Garden Structures - you can make plant supports and willow panels</p>
 
-                                 <a href="mailto:clyde@wilwicker.co.uk?subject=Subject%20Here">
-                                        <button class="text-btn">please email me to book</button>
-                                 </a>
+                                     <p>I am happy to teach one to one or in groups</p>
+                                     <p>Please get in touch for more information</p>
+                                     <p class="padding-bottom-25">Day courses start at £95 per person</p>
+
+                                     <a href="mailto:clyde@wildwicker.co.uk?subject=Subject%20Here">
+                                            <button class="text-btn">please email me to book</button>
+                                     </a>
+
+                                     <script>
+                                            document.getElementById('emailBtn').addEventListener('click', function() {
+                                            window.location.href = 'mailto:clyde@wildwicker.co.uk?subject=Subject%20Here';
+                                      });
+                                      </script>
 
                                  <p class="padding-bottom-25">  </p>
                                  <p class="padding-bottom-25">  </p>
